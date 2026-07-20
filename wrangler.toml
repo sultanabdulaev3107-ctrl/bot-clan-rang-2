@@ -1,0 +1,15 @@
+name = "bot-clan-rang-2"
+main = "index.js"
+compatibility_date = "2026-05-23"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+# 10, 15, 20 UTC (вечер по МСК) и 25 9 UTC (12:25 МСК)
+crons = ["10 17 * * *", "15 17 * * *", "20 17 * * *", "3 0 * * *"]
+
+# Напоминание: Удалите переменные отсюда и используйте `npx wrangler secret put`
+[vars]
+TELEGRAM_BOT_TOKEN = "8829416211:AAFWmyZa3JvG9bX6hPNWWGW8VGgB5Mgg6BY"
+FIREBASE_LOGIN_URL = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBW1ZbMiUeDZHYUO2bY8Bfnf5rRgrQGPTM"
+RANK_URL = "https://us-central1-cp-multiplayer.cloudfunctions.net/SetUserRating4"
+ADMIN_CHAT_ID = "7729315191"
